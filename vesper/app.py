@@ -309,13 +309,11 @@ class VesperWindow(QMainWindow):
         transfers = compute_transfers(alt_init, alt_target, delta_inc)
         self._update_results(transfers)
 
-        # Redraw in-place (no figure recreation)
+        # Redraw in-place (no figure recreation, fixed margins)
         update_orbit_figure(self._orbit_ax, alt_init, alt_target, transfers)
-        self._orbit_fig.tight_layout(pad=1.0)
         self.orbit_canvas.draw_idle()
 
         update_trade_figure(self._trade_ax, alt_init, alt_target, delta_inc)
-        self._trade_fig.tight_layout(pad=1.0)
         self.trade_canvas.draw_idle()
 
         self.statusBar().showMessage(

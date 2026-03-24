@@ -150,7 +150,8 @@ def create_orbit_figure(dpi=100):
     """Create an empty orbit figure. Call update_orbit_figure to populate."""
     fig = Figure(figsize=(6, 6), dpi=dpi, facecolor=MPL_BG)
     ax = fig.add_subplot(111, aspect="equal")
-    fig.tight_layout(pad=1.0)
+    # Fixed margins — prevents layout jitter when tick labels change
+    fig.subplots_adjust(left=0.12, right=0.95, top=0.93, bottom=0.08)
     return fig, ax
 
 
@@ -158,7 +159,7 @@ def create_trade_figure(dpi=100):
     """Create an empty trade-study figure. Call update_trade_figure to populate."""
     fig = Figure(figsize=(5.5, 3.0), dpi=dpi, facecolor=MPL_BG)
     ax = fig.add_subplot(111)
-    fig.tight_layout(pad=1.0)
+    fig.subplots_adjust(left=0.12, right=0.96, top=0.88, bottom=0.18)
     return fig, ax
 
 
