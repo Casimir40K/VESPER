@@ -5,30 +5,32 @@ Central place for all visual theming constants.
 
 # ── Colour Palette ──────────────────────────────────────────────────────────
 
-BG_DARKEST = "#060a10"
-BG_DARK = "#0a0e14"
-BG_PANEL = "#0d1117"
-BG_CARD = "#111820"
-BG_INPUT = "#0f1923"
+BG_DARKEST = "#000000"
+BG_DARK = "#010108"
+BG_PANEL = "#06060e"
+BG_CARD = "#0a0a16"
+BG_INPUT = "#080812"
 
-GRID_DIM = "#1a2332"
-GRID_MID = "#243044"
+GRID_DIM = "#12182a"
+GRID_MID = "#1c2640"
 
 CYAN = "#00e5ff"
-CYAN_DIM = "#00768a"
+CYAN_DIM = "#005f6e"
 CYAN_GLOW = "#00e5ff"
+CYAN_BRIGHT = "#60f8ff"
 
 AMBER = "#ffab00"
-AMBER_DIM = "#996800"
+AMBER_DIM = "#7a5200"
+AMBER_BRIGHT = "#ffd060"
 
 RED = "#ff1744"
-RED_DIM = "#991030"
+RED_DIM = "#6e0a1e"
 
 GREEN = "#00e676"
 
-TEXT_PRIMARY = "#c8d6e5"
-TEXT_DIM = "#6b7d94"
-TEXT_BRIGHT = "#e8f0fa"
+TEXT_PRIMARY = "#b8c8dc"
+TEXT_DIM = "#506078"
+TEXT_BRIGHT = "#e0ecf8"
 
 WHITE = "#f0f4f8"
 
@@ -36,16 +38,20 @@ WHITE = "#f0f4f8"
 
 MPL_BG = BG_DARKEST
 MPL_FACE = BG_DARK
-MPL_GRID = GRID_DIM
+MPL_GRID = "#0e1420"
 MPL_TEXT = TEXT_PRIMARY
 
 ORBIT_INITIAL = CYAN
+ORBIT_INITIAL_GLOW = "#00e5ff"
 ORBIT_TARGET = AMBER
+ORBIT_TARGET_GLOW = "#ffab00"
 ORBIT_TRANSFER = "#b388ff"  # soft violet for transfer arcs
+ORBIT_TRANSFER_GLOW = "#9060ee"
 ORBIT_TRANSFER_2 = "#ff80ab"  # pink for bi-elliptic second arc
 BURN_MARKER = RED
-EARTH_COLOR = "#1565c0"
-EARTH_EDGE = CYAN_DIM
+EARTH_WIRE = "#1a6fa8"       # wireframe line colour
+EARTH_WIRE_GLOW = "#0d3a5c"  # dim glow behind wireframe
+EARTH_FILL = "#020810"       # nearly invisible fill
 
 # ── Qt Stylesheet ───────────────────────────────────────────────────────────
 
