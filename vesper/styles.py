@@ -18,10 +18,12 @@ CYAN = "#00e5ff"
 CYAN_DIM = "#005f6e"
 CYAN_GLOW = "#00e5ff"
 CYAN_BRIGHT = "#60f8ff"
+CYAN_MUTED = "#00899a"
 
 AMBER = "#ffab00"
 AMBER_DIM = "#7a5200"
 AMBER_BRIGHT = "#ffd060"
+AMBER_MUTED = "#a06e00"
 
 RED = "#ff1744"
 RED_DIM = "#6e0a1e"
@@ -45,13 +47,13 @@ ORBIT_INITIAL = CYAN
 ORBIT_INITIAL_GLOW = "#00e5ff"
 ORBIT_TARGET = AMBER
 ORBIT_TARGET_GLOW = "#ffab00"
-ORBIT_TRANSFER = "#b388ff"  # soft violet for transfer arcs
+ORBIT_TRANSFER = "#b388ff"
 ORBIT_TRANSFER_GLOW = "#9060ee"
-ORBIT_TRANSFER_2 = "#ff80ab"  # pink for bi-elliptic second arc
+ORBIT_TRANSFER_2 = "#ff80ab"
 BURN_MARKER = RED
-EARTH_WIRE = "#1a6fa8"       # wireframe line colour
-EARTH_WIRE_GLOW = "#0d3a5c"  # dim glow behind wireframe
-EARTH_FILL = "#020810"       # nearly invisible fill
+EARTH_WIRE = "#1a6fa8"
+EARTH_WIRE_GLOW = "#0d3a5c"
+EARTH_FILL = "#020810"
 
 # ── Qt Stylesheet ───────────────────────────────────────────────────────────
 
@@ -123,58 +125,6 @@ QGroupBox::title {{
     letter-spacing: 1px;
 }}
 
-QSlider::groove:horizontal {{
-    border: 1px solid {GRID_DIM};
-    height: 4px;
-    background: {BG_CARD};
-    border-radius: 2px;
-}}
-
-QSlider::handle:horizontal {{
-    background: {CYAN};
-    border: 1px solid {CYAN_DIM};
-    width: 12px;
-    height: 12px;
-    margin: -5px 0;
-    border-radius: 6px;
-}}
-
-QSlider::sub-page:horizontal {{
-    background: {CYAN_DIM};
-    border-radius: 2px;
-}}
-
-QSpinBox, QDoubleSpinBox {{
-    background-color: {BG_INPUT};
-    border: 1px solid {GRID_DIM};
-    border-radius: 2px;
-    color: {TEXT_BRIGHT};
-    padding: 3px 6px;
-    font-size: 12px;
-    selection-background-color: {CYAN_DIM};
-}}
-
-QSpinBox::up-button, QDoubleSpinBox::up-button,
-QSpinBox::down-button, QDoubleSpinBox::down-button {{
-    background-color: {BG_CARD};
-    border: 1px solid {GRID_DIM};
-    width: 16px;
-}}
-
-QSpinBox::up-arrow, QDoubleSpinBox::up-arrow {{
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent;
-    border-bottom: 5px solid {TEXT_DIM};
-    width: 0; height: 0;
-}}
-
-QSpinBox::down-arrow, QDoubleSpinBox::down-arrow {{
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent;
-    border-top: 5px solid {TEXT_DIM};
-    width: 0; height: 0;
-}}
-
 QPushButton {{
     background-color: {BG_CARD};
     border: 1px solid {GRID_DIM};
@@ -197,8 +147,15 @@ QPushButton:pressed {{
 }}
 
 QPushButton[class="preset"] {{
-    padding: 4px 10px;
+    padding: 5px 10px;
     font-size: 10px;
+    text-align: left;
+    padding-left: 12px;
+    border-left: 2px solid {CYAN_DIM};
+}}
+
+QPushButton[class="preset"]:hover {{
+    border-left: 2px solid {CYAN};
 }}
 
 QFrame[class="separator"] {{
